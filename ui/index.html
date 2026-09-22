@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; object-src 'none'; base-uri 'none'">
+  <title>ForestRP Overlay</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="brand"><img src="../assets/logo.png" alt=""><strong>ForestRP <span id="brand-sub">Overlay</span></strong></div>
+    <nav aria-label="Sterowanie oknem">
+      <button id="settings" title="Ustawienia" aria-label="Ustawienia" hidden>☷</button>
+      <button id="reload" title="Odśwież panel" aria-label="Odśwież panel" hidden>↻</button>
+      <button id="hide" title="Schowaj" aria-label="Schowaj">−</button>
+      <button id="quit" title="Zakończ aplikację" aria-label="Zakończ aplikację">×</button>
+    </nav>
+  </header>
+  <main id="hub">
+    <div class="intro"><h1>Twoje nakładki</h1><span class="version" id="version">1.3.1</span></div>
+    <section class="cards" aria-label="Dostępne nakładki">
+      <article><div class="card-top"><span class="device-symbol">▤</span><kbd id="key-mdt">F6</kbd></div><h2>MDT</h2><button class="launch" data-panel="mdt">Otwórz MDT ↗</button></article>
+      <article><div class="card-top"><span class="device-symbol">▯</span><kbd id="key-phone">F7</kbd></div><h2>Telefon</h2><button class="launch" data-panel="phone">Otwórz telefon ↗</button></article>
+    </section>
+    <div class="quick"><button class="primary" id="both">Otwórz oba panele</button><button id="reset-layout">Przywróć układ</button></div>
+    <form>
+      <h2 class="settings-title">Skróty i zachowanie</h2>
+      <div class="shortcut-row">
+        <label>MDT <button type="button" id="shortcut-mdt" class="shortcut" data-shortcut="mdt" aria-describedby="shortcut-help">F6</button></label>
+        <label>Telefon <button type="button" id="shortcut-phone" class="shortcut" data-shortcut="phone" aria-describedby="shortcut-help">F7</button></label>
+      </div>
+      <p class="hint" id="shortcut-help">Kliknij skrót i naciśnij klawisz lub kombinację, np. Ctrl + Shift + M.</p>
+      <div class="setting-row">
+        <label class="switch"><input id="animations" type="checkbox" checked> Animacje</label>
+        <label class="switch"><input id="game-mode" type="checkbox" checked> Utrzymuj nad grą</label>
+        <button type="submit">Zapisz</button>
+      </div>
+      <p class="hint">Przesuwaj panele za górną ramkę. Zmieniaj rozmiar uchwytem w prawym dolnym rogu.</p>
+      <label class="switch"><input id="auto-updates" type="checkbox" checked> Sprawdzaj aktualizacje przy uruchomieniu i co 6 godzin</label>
+    </form>
+    <section aria-label="Aktualizacje">
+      <p id="update-status" role="status">Nie sprawdzono aktualizacji.</p>
+      <button id="check-updates">Sprawdź aktualizacje</button>
+      <button id="open-releases">Otwórz wydania na GitHub</button>
+    </section>
+    <p id="status" role="status"></p>
+    <footer>Esc - schowaj panel · Pełny ekran: w razie problemów użyj trybu bez ramek lub okienkowego.</footer>
+  </main>
+  <section id="panel-state" hidden>
+    <img src="../assets/logo.png" alt="ForestRP Overlay"><h1 id="panel-title">Twój panel</h1><p id="panel-status" role="status">Łączenie…</p>
+    <button id="retry">Ponów</button><button id="panel-settings">Ustawienia</button>
+  </section>
+  <div id="device-bottom" hidden><span></span><button id="resize-grip" title="Przeciągnij, aby zmienić rozmiar" aria-label="Przeciągnij, aby zmienić rozmiar">◢</button></div>
+  <script src="../shortcuts.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

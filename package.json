@@ -1,0 +1,78 @@
+{
+  "name": "forestrp-overlay",
+  "version": "1.3.1",
+  "description": "ForestRP Overlay - MDT i telefon",
+  "author": "Forest RP",
+  "private": true,
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "node --test tests/*.test.js",
+    "test:smoke": "electron tests/smoke.cjs",
+    "build": "electron-builder --win nsis --publish never",
+    "pack": "electron-builder --win --dir",
+    "icons": "electron scripts/generate-icon.cjs"
+  },
+  "devDependencies": {
+    "electron": "44.4.3",
+    "electron-builder": "^26.15.3"
+  },
+  "build": {
+    "appId": "pl.forestrp.mdt",
+    "productName": "ForestRP Overlay",
+    "electronLanguages": [
+      "pl",
+      "en-US"
+    ],
+    "win": {
+      "target": {
+        "target": "nsis",
+        "arch": [
+          "x64"
+        ]
+      },
+      "icon": "assets/icon.ico",
+      "signExecutable": false
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "ForestRP Overlay",
+      "uninstallDisplayName": "ForestRP Overlay",
+      "include": "build/installer.nsh",
+      "installerLanguages": [
+        "pl_PL",
+        "en_US"
+      ]
+    },
+    "files": [
+      "main.js",
+      "updates.js",
+      "policy.js",
+      "animation.js",
+      "preload.js",
+      "ui/**/*",
+      "assets/**/*",
+      "LICENSE",
+      "shortcuts.js"
+    ],
+    "extraResources": [],
+    "removePackageScripts": true,
+    "compression": "maximum",
+    "asar": true,
+    "artifactName": "ForestRP-Overlay-${version}-${arch}.${ext}"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FIrekNaPatelni/ForestRP-Overlay.git"
+  },
+  "homepage": "https://github.com/FIrekNaPatelni/ForestRP-Overlay#readme",
+  "bugs": {
+    "url": "https://github.com/FIrekNaPatelni/ForestRP-Overlay/issues"
+  }
+}

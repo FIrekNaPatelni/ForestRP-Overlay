@@ -1,0 +1,309 @@
+:root {
+	color-scheme: dark;
+	font-family: "Segoe UI", Arial, sans-serif;
+	background: #0c141c;
+	color: #edf4f4;
+}
+* {
+	box-sizing: border-box;
+}
+[hidden] {
+	display: none !important;
+}
+body {
+	margin: 0;
+}
+button {
+	font: inherit;
+	color: inherit;
+	border: 1px solid #34464f;
+	border-radius: 9px;
+	background: #172630;
+	padding: 9px 14px;
+	cursor: pointer;
+}
+button:hover {
+	background: #233b45;
+	border-color: #72d9b0;
+}
+button:focus-visible, input:focus-visible {
+	outline: 2px solid #72d9b0;
+	outline-offset: 3px;
+}
+header {
+	height: 52px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 18px;
+	border-bottom: 1px solid #22313a;
+	-webkit-app-region: drag;
+	background: #111e27;
+}
+.brand {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+.brand img {
+	width: 30px;
+	height: 30px;
+	object-fit: contain;
+}
+.brand strong {
+	font-size: 13px;
+	letter-spacing: .6px;
+}
+.brand strong span {
+	color: #72d9b0;
+	font-weight: 500;
+}
+nav {
+	display: flex;
+	gap: 4px;
+	-webkit-app-region: no-drag;
+}
+nav button {
+	font-size: 19px;
+	line-height: 1;
+	padding: 5px 10px;
+	border-color: transparent;
+	background: transparent;
+}
+main {
+	max-width: 900px;
+	margin: auto;
+	padding: 28px 32px;
+}
+.intro {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 24px;
+}
+h1 {
+	font-size: 29px;
+	letter-spacing: -1px;
+	margin: 0;
+}
+.version {
+	font-size: 12px;
+	color: #96acae;
+}
+.cards {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 16px;
+}
+article {
+	background: linear-gradient(140deg,#182b31,#111e28);
+	border: 1px solid #2a4147;
+	border-radius: 16px;
+	padding: 18px;
+}
+.card-top {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 8px;
+}
+.device-symbol {
+	color: #72d9b0;
+	font-size: 30px;
+}
+kbd {
+	font: 12px "Segoe UI",sans-serif;
+	color: #c9e2d8;
+	border: 1px solid #405751;
+	border-bottom-width: 3px;
+	padding: 4px 9px;
+	border-radius: 6px;
+	background: #172b29;
+	overflow-wrap: anywhere;
+}
+h2 {
+	font-size: 20px;
+	margin: 12px 0 18px;
+}
+.launch {
+	display: block;
+	width: 100%;
+	font-size: 13px;
+	text-align: left;
+}
+.launch.active {
+	border-color: #72d9b0;
+	color: #72d9b0;
+}
+.quick {
+	display: flex;
+	gap: 12px;
+	margin: 18px 0 24px;
+}
+.primary {
+	background: #72d9b0;
+	color: #10271e;
+	font-weight: 650;
+	border-color: #72d9b0;
+}
+.primary:hover {
+	background: #9ceaca;
+}
+form {
+	border-top: 1px solid #26353f;
+	padding-top: 18px;
+}
+.settings-title {
+	font-size: 14px;
+	margin: 0 0 14px;
+}
+.shortcut-row {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 16px;
+}
+.shortcut-row label {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	font-size: 13px;
+}
+.shortcut {
+	flex: 1;
+	min-width: 0;
+	font-size: 12px;
+}
+.recording {
+	border-color: #72d9b0;
+	color: #72d9b0;
+}
+.hint {
+	color: #8fa5af;
+	font-size: 12px;
+	line-height: 1.5;
+	margin: 10px 0 18px;
+}
+.setting-row {
+	display: flex;
+	align-items: center;
+	gap: 18px;
+	flex-wrap: wrap;
+}
+.setting-row button {
+	margin-left: auto;
+	font-size: 12px;
+}
+.switch {
+	display: flex;
+	align-items: center;
+	gap: 7px;
+	font-size: 13px;
+}
+input {
+	accent-color: #72d9b0;
+	width: 16px;
+	height: 16px;
+}
+#status {
+	color: #b7d9c7;
+	font-size: 12px;
+	min-height: 18px;
+	margin: 0 0 12px;
+}
+footer {
+	color: #80959f;
+	font-size: 11px;
+	line-height: 1.5;
+}
+.panel-root {
+	background: transparent;
+	overflow: hidden;
+}
+.panel {
+	height: 100vh;
+	overflow: hidden;
+	border: 1px solid #557077;
+	border-radius: 24px;
+	background: linear-gradient(135deg,#34464e,#111b22 35%,#1c2e37);
+}
+.panel.phone {
+	border-radius: 30px;
+}
+.panel header {
+	height: 39px;
+	padding: 0 14px;
+	border: 0;
+	background: transparent;
+}
+.panel .brand {
+	gap: 6px;
+}
+.panel .brand img {
+	width: 19px;
+	height: 19px;
+}
+.panel .brand strong {
+	font-size: 10px;
+	letter-spacing: .2px;
+}
+.panel nav {
+	gap: 0;
+}
+.panel nav button {
+	padding: 4px 7px;
+	font-size: 16px;
+}
+.panel #panel-state {
+	padding: 60px 20px;
+	text-align: center;
+}
+.panel #panel-state img {
+	width: 64px;
+	height: 64px;
+	margin-bottom: 20px;
+}
+.panel h1 {
+	font-size: 22px;
+}
+.panel p {
+	font-size: 13px;
+	color: #a7bbc5;
+}
+.panel #panel-state button {
+	margin: 5px;
+	font-size: 12px;
+}
+#device-bottom {
+	position: fixed;
+	height: 21px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: grid;
+	place-items: center;
+}
+#device-bottom span {
+	width: 62px;
+	height: 3px;
+	border-radius: 3px;
+	background: #a5bdc3;
+	opacity: .65;
+}
+#resize-grip {
+	position: absolute;
+	right: 9px;
+	bottom: 2px;
+	padding: 0 5px;
+	border: 0;
+	background: transparent;
+	font-size: 16px;
+	line-height: 18px;
+	color: #a5bdc3;
+	cursor: nwse-resize;
+	touch-action: none;
+}
+@media (prefers-reduced-motion: reduce) {
+	* {
+		scroll-behavior: auto;
+	}
+}
