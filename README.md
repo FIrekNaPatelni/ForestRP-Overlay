@@ -4,7 +4,7 @@ MDT i telefon ForestRP jako nakładki na Windows 10/11 x64. Licencja MIT.
 
 ## Instalacja
 
-1. Pobierz `ForestRP-Overlay-1.3.0-x64.exe` z [najnowszego wydania](https://github.com/FIrekNaPatelni/ForestRP/releases/latest).
+1. Pobierz `ForestRP-Overlay-1.3.0-x64.exe` z [najnowszego wydania](https://github.com/FIrekNaPatelni/ForestRP-Overlay/releases/latest).
 2. Zamknij poprzednią wersję.
 3. W instalatorze wybierz zakres instalacji, folder docelowy oraz skróty na pulpicie i w menu Start.
 4. Na ostatniej stronie możesz uruchomić ForestRP Overlay.
@@ -42,5 +42,5 @@ Identyfikator instalacji i nazwy sesji zachowano dla zgodności aktualizacji. Pr
 
 ## Wydanie
 
-Repozytorium docelowe: [FIrekNaPatelni/ForestRP-Overlay](https://github.com/FIrekNaPatelni/ForestRP).
+Repozytorium docelowe: [FIrekNaPatelni/ForestRP-Overlay](https://github.com/FIrekNaPatelni/ForestRP-Overlay).
 
